@@ -15,6 +15,7 @@ class CreateCatrucTable extends Migration
     {
         Schema::create('catruc', function (Blueprint $table) {
             $table->increments('ca_id');
+            $table->unsignedInteger('ad_id');
             $table->string('ca_ten');
             $table->tinyInteger('ca_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();

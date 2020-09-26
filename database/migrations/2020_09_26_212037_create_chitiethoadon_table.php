@@ -14,8 +14,8 @@ class CreateChitiethoadonTable extends Migration
     public function up()
     {
         Schema::create('chitiethoadon', function (Blueprint $table) {
-            $table->increments('giay_id');
-            $table->increments('hd_id');
+            $table->unsignedInteger('giay_id');
+            $table->unsignedInteger('hd_id');
             $table->unsignedInteger('soluong');
             $table->timestamps();
 

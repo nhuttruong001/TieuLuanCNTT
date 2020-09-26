@@ -22,7 +22,6 @@ class CreateGiayTable extends Migration
             $table->double('giay_gia');
             $table->String('giay_hinhanh');
             $table->text('giay_mota');
-            $table->unsignedInteger('loai_id');
             $table->tinyInteger('giay_trangthai')->comment('1 la hien thi 0 la an thong tin');
 
             
