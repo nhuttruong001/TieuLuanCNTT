@@ -19,6 +19,7 @@ class CreateKhachhangTable extends Migration
             $table->string('kh_password');
             $table->string('kh_hoten');
             $table->date('kh_ngaysinh');
+            $table->tinyInteger('kh_gioitinh')->comment('1 la Nam 0 la Nữ');
             $table->string('kh_diachi');
             $table->string('kh_sdt');
             $table->tinyInteger('kh_trangthai')->comment('1 la hien thi 0 la an thong tin');

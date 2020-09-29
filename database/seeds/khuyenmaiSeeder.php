@@ -13,22 +13,28 @@ class khuyenmaiSeeder extends Seeder
     {
         $arr = [
             [
-                'ncc_id' => 1,
-                'ncc_tên' => 'nike',
-                'ncc_trangthai' => 1
+                'km_id' => 1,
+                'km_ngaybd' => '2020-01-01',
+                'km_ngaykt' => '2020-01-05',
+                'km_phantram' => 25.0,
+                'km_trangthai' => 1
             ],
             [
-                'ncc_id' => 2,
-                'ncc_tên' => 'adidas',
-                'ncc_trangthai' => 1
+                'km_id' => 2,
+                'km_ngaybd' => '2020-02-01',
+                'km_ngaykt' => '2020-02-04',
+                'km_phantram' => 15.0,
+                'km_trangthai' => 1
             ],
             [
-                'ncc_id' => 3,
-                'ncc_tên' => 'bitis',
-                'ncc_trangthai' => 1
+                'km_id' => 3,
+                'km_ngaybd' => '2021-03-10',
+                'km_ngaykt' => '2021-01-15',
+                'km_phantram' => 30.0,
+                'km_trangthai' => 1
             ]
 
             ];
-            DB::table('nhacungcap')->insert($arr);
+            DB::table('khuyenmai')->insert($arr);
     }
 }

@@ -14,17 +14,17 @@ class nhacungcapSeeder extends Seeder
         $arr = [
             [
                 'ncc_id' => 1,
-                'ncc_tên' => 'nike',
+                'ncc_ten' => 'nike',
                 'ncc_trangthai' => 1
             ],
             [
                 'ncc_id' => 2,
-                'ncc_tên' => 'adidas',
+                'ncc_ten' => 'adidas',
                 'ncc_trangthai' => 1
             ],
             [
                 'ncc_id' => 3,
-                'ncc_tên' => 'bitis',
+                'ncc_ten' => 'bitis',
                 'ncc_trangthai' => 1
             ]
 

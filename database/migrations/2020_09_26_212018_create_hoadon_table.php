@@ -18,6 +18,7 @@ class CreateHoadonTable extends Migration
             $table->unsignedInteger('kh_id');
             $table->unsignedInteger('nv_id');
             $table->date('hd_ngaylap');
+            $table->tinyInteger('hd_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
 
             $table->foreign('nv_id')->references('nv_id')->on('nhanvien')->onDelete('CASCADE')->onUpdate('CASCADE');

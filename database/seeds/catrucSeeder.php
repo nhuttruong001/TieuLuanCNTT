@@ -14,19 +14,19 @@ class catrucSeeder extends Seeder
         $arr = [
             [
                'ca_id' => 1,
-               'ad_ad' => 1, 
+               'ad_id' => 1, 
                'ca_ten' => 'ca1',
                'ca_trangthai' => 1
             ],
             [
                 'ca_id' => 2,
-                'ad_ad' => 2, 
+                'ad_id' => 2, 
                 'ca_ten' => 'ca2',
                 'ca_trangthai' => 1
             ],
             [
                 'ca_id' => 3,
-                'ad_ad' => 3, 
+                'ad_id' => 3, 
                 'ca_ten' => 'ca3',
                 'ca_trangthai' => 1
              ]

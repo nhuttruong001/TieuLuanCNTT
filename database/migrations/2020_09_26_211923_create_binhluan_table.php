@@ -21,8 +21,8 @@ class CreateBinhluanTable extends Migration
             $table->tinyInteger('bl_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
 
-            $table->foreign('giay_id')->references('giay_id')->on('giay')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('kh_id')->references('kh_id')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('giay_id')->references('giay_id')->on('giay');
+            $table->foreign('kh_id')->references('kh_id')->on('khachhang');
         });
         
     }
