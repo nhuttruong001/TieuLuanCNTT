@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class nhanvien_catruc extends Seeder
+class nhanvien_catrucSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -40,5 +40,6 @@ class nhanvien_catruc extends Seeder
 
             ];
             DB::table('nhanvien_catruc')->insert($arr);
+
     }
 }

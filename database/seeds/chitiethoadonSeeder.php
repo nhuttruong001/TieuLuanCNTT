@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class chitiethoadon extends Seeder
+class chitiethoadonSeeder extends Seeder
 {
     /**
      * Run the database seeds.

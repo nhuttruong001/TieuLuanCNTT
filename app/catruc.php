@@ -9,10 +9,10 @@ class catruc extends Model
     protected $table = "catruc";
 
     public function admin(){
-        return $this->belongsto('App\admin');
+        return $this->belongsto('App\admin','ad_id','ad_id');
     }
 
     public function nhanvien(){
-        return $this->belongstoMany('App\nhanvien','nhanvien_catruc','nv_id','ad_id');
+        return $this->hasMany('App\nhanvien','nv_id','nv_id');
     }
 }

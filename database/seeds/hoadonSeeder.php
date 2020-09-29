@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class hoadon extends Seeder
+class hoadonSeeder extends Seeder
 {
     /**
      * Run the database seeds.

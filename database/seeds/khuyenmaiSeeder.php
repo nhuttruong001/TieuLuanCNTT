@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class nhacungcap extends Seeder
+class khuyenmaiSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class nhanvien extends Seeder
+class nhanvienSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class nhanvien extends Seeder
      */
     public function run()
     {
-        $arr = [
+        //$arr = [
             [
                 'nv_id' => 1,
                 'nv_username' => 'hoang01',
@@ -81,6 +81,5 @@ class nhanvien extends Seeder
         ];
 
             DB::table('nhanvien')->insert($arr);
-
     }
 }

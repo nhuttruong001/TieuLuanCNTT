@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class catruc extends Seeder
+class catrucSeeder extends Seeder
 {
     /**
      * Run the database seeds.

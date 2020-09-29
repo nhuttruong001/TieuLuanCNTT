@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class binhluan extends Seeder
+class binhluanSeeder extends Seeder
 {
     /**
      * Run the database seeds.

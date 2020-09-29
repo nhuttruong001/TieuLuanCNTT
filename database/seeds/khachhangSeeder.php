@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class khachhang extends Seeder
+class khachhangSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -9,6 +9,6 @@ class binhluan extends Model
     protected $table = "binhluan";
 
     public function giay(){
-        return $this->belongsto('App\giay');
+        return $this->belongsto('App\giay','giay_id','giay_id');
     }
 }

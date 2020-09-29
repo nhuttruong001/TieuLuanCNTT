@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class loaigiay extends Seeder
+class loaigiaySeeder extends Seeder
 {
     /**
      * Run the database seeds.
