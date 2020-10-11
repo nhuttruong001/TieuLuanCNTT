@@ -19,8 +19,8 @@ class CreateChitiethoadonTable extends Migration
             $table->unsignedInteger('soluong');
             $table->timestamps();
 
-            $table->foreign('giay_id')->references('giay_id')->on('giay');
-            $table->foreign('hd_id')->references('hd_id')->on('hoadon');
+            $table->foreign('giay_id')->references('giay_id')->on('giay')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('hd_id')->references('hd_id')->on('hoadon')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 

@@ -20,7 +20,7 @@ class CreateCatrucTable extends Migration
             $table->tinyInteger('ca_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
 
-            $table->foreign('ad_id')->references('ad_id')->on('admin'); 
+            $table->foreign('ad_id')->references('ad_id')->on('admin')->onDelete('CASCADE')->onUpdate('CASCADE'); 
         });
     }
 
