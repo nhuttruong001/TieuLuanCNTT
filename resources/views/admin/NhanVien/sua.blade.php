@@ -22,7 +22,6 @@
               <form class="cmxform form-horizontal"method="post" action="{{route('NhanVien_XLSua',['id'=>$NhanVien->nv_id])}}" enctype="multipart/form-data" id="formDemo1" novalidate="novalidate">
                 @csrf
 
-
                 {{-- username --}}
                 
                     <div class="form-group " >

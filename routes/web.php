@@ -52,6 +52,40 @@ Route::group(['prefix' => 'admin'],function(){
         //xoa Nhan Vien
         Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
     });
+
+
+    Route::group(['prefix' => 'LoaiGiay'],function(){
+        // #Danh sach LoaiGiay
+        Route::get('/LoaiGiay_DS','LoaiGiayController@getDanhSach')->name('LoaiGiay_DS');
+        // //Form Thêm NhanVien
+        // Route::get('/NhanVien_FormThem', 'NhanVienController@getThem')->name('NhanVien_Them');
+        // Route::post('/NhanVien_ThemNhanVien', 'NhanVienController@postThem')->name('NhanVien_XLThem');
+
+        // //From sua Nhan Vien
+        // Route::get('/NhanVien_FormSua/{id}', 'NhanVienController@getSua')->name('NhanVien_Sua');
+        // Route::post('/NhanVien_SuaNhanVien/{id}', 'NhanVienController@postSua')->name('NhanVien_XLSua');
+
+        // //xoa Nhan Vien
+        // Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
+    });
+
+
+    Route::group(['prefix' => 'Giay'],function(){
+        // #Danh sach LoaiGiay
+        Route::get('/Giay_DS','GiayController@getDanhSach')->name('Giay_DS');
+        // //Form Thêm NhanVien
+        // Route::get('/NhanVien_FormThem', 'NhanVienController@getThem')->name('NhanVien_Them');
+        // Route::post('/NhanVien_ThemNhanVien', 'NhanVienController@postThem')->name('NhanVien_XLThem');
+
+        // //From sua Nhan Vien
+        // Route::get('/NhanVien_FormSua/{id}', 'NhanVienController@getSua')->name('NhanVien_Sua');
+        // Route::post('/NhanVien_SuaNhanVien/{id}', 'NhanVienController@postSua')->name('NhanVien_XLSua');
+
+        // //xoa Nhan Vien
+        // Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
+    });
+    
+
 });
 
 

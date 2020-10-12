@@ -26,7 +26,7 @@
                         <span>Quản lý Loại Giày</span>
                     </a>
                     <ul class="sub">
-                    <li><a href="">Danh Sách Loại Giày</a></li>
+                    <li><a href="{{route('LoaiGiay_DS')}}">Danh Sách Loại Giày</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -35,7 +35,7 @@
                         <span>Quản lý Giày</span>
                     </a>
                     <ul class="sub">
-                    <li><a href="">Danh Sách Giày</a></li>
+                    <li><a href="{{route('Giay_DS')}}">Danh Sách Giày</a></li>
                     </ul>
                 </li>
                 
