@@ -38,7 +38,7 @@
 <div class="panel panel-default">
   {{-- <div id = demo> --}}
     <div class="panel-heading">
-      Danh Sách Nhân Viên
+      Danh Sách Nhà Cung Cấp
     </div>
     @extends('admin.layout.partials.error-message')
     <div class="panel-body">
@@ -49,7 +49,7 @@
         <form  id="content-form" class="form-inline" role="form" action="" method="get">
             {{ csrf_field() }}
             <button type="submit" class="btn btn-primary" title="Tìm" id="search"><i class=" glyphicon glyphicon-search" style="color: aliceblue"></i></button>
-                  <a href="{{route('NhanVien_Them')}}"><button title="Thêm" type="button"  class="btn btn-primary"><i class="glyphicon glyphicon-plus" style="color: aliceblue"></i></button></a>
+                  <a href=""><button title="Thêm" type="button"  class="btn btn-primary"><i class="glyphicon glyphicon-plus" style="color: aliceblue"></i></button></a>
         </form>
       </div>
     </div>
@@ -67,30 +67,25 @@
         <thead>
           <tr>
             <th data-breakpoints="xs">STT</th>
-            <th>Tài khoản</th>
-            <th>Họ tên</th>
-            <th>Giới tính</th>
-            <th>Ngày sinh</th>
-            <th>Địa chỉ</th>
-            <th>Sđt</th>
+            <th>Tên</th>
+          
           </tr>
         </thead>
         
         <tbody>
-            @foreach ($NhanVien as $key => $nv)
-            @if ($nv->nv_trangthai == 1)
+            @foreach ($NhaCungCap as $key => $ncc)
+            @if ($ncc->ncc_trangthai == 1)
                 <tr data-expanded="true">
                     <td>{{$key + 1}}</td>
-                    <td>{{$nv->nv_username}}</td>
-                    <td>{{$nv->nv_hoten}}</td>
-                    <td>{{$nv->nv_gioitinh}}</td>
-                    <td>{{$nv->nv_ngaysinh}}</td>
-                    <td>{{$nv->nv_diachi}}</td>
-                    <td>{{$nv->nv_sdt}}</td>
+                    <td>{{$ncc->ncc_ten}}</td>
+                   
+                   
+                   
+                   
                 <!-- <td><a  title="Chi tiết" class="glyphicon glyphicon-eye-open" href="#"></a></td> -->
                 <td>
-                  <i class='fas fa-pencil-alt'></i><a  title="Sửa" class="glyphicon glyphicon-edit" href="{{route('NhanVien_Sua',['id'=>$nv->nv_id])}}"></a>
-                  <i class='fas fa-trash-alt'></i><a   title="Xóa" class="glyphicon glyphicon-trash" href="{{route('NhanVien_Xoa',['id'=>$nv->nv_id])}}" onclick="return confirm('Bạn có chắc muốn xóa không?');"></a>
+                  <i class='fas fa-pencil-alt'></i><a  title="Sửa" class="glyphicon glyphicon-edit" href="#"></a>
+                  <i class='fas fa-trash-alt'></i><a   title="Xóa" class="glyphicon glyphicon-trash" href="" onclick="return confirm('Bạn có chắc muốn xóa không?');"></a>
                 </td>
             </tr>
             @endif
@@ -99,7 +94,7 @@
       </table>
       <div class="panel-body">
           <div class="form-group">
-            <center>{!! $NhanVien->links() !!}</center>
+            <center>{!! $NhaCungCap->links() !!}</center>
         </div>
       </div>
     </div>

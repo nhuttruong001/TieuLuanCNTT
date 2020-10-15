@@ -22,6 +22,26 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;">
+                        <i class="icon-user"></i>
+                        <span>Khuyến Mãi</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{route('KhuyenMai_DS')}}">Danh Sách Khuyến Mãi</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="icon-user"></i>
+                        <span>Nhà Cung Cấp</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{route('NhaCungCap_DS')}}">Danh Sách Nhà Cung Cấp</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
                         <i class="fa fa-calendar-o"></i>
                         <span>Quản lý Loại Giày</span>
                     </a>
