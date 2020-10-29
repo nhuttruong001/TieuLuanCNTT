@@ -36,6 +36,9 @@ Route::group(['prefix' => 'admin'],function(){
 
         //xoa Admin
         Route::get('/Admin_Xoa/{id}', 'AdminController@getXoa')->name('Admin_Xoa');
+
+        // tim kiem admin
+        Route::get('/Admin_Timkiem', 'AdminController@postTimkiem')->name('Admin_Timkiem');
     });
 
     Route::group(['prefix' => 'NhanVien'],function(){
@@ -51,6 +54,8 @@ Route::group(['prefix' => 'admin'],function(){
 
         //xoa Nhan Vien
         Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
+        //Tim kiem nhan vien
+        Route::get('/NhanVien_Timkiem', 'NhanVienController@postTimkiem')->name('NhanVien_Timkiem');
     });
 
 
@@ -72,9 +77,9 @@ Route::group(['prefix' => 'admin'],function(){
     Route::group(['prefix' => 'Giay'],function(){
         // #Danh sach Nha cung cap
         Route::get('/Giay_DS','GiayController@getDanhSach')->name('Giay_DS');
-        // //Form Thêm NhanVien
-        // Route::get('/NhanVien_FormThem', 'NhanVienController@getThem')->name('NhanVien_Them');
-        // Route::post('/NhanVien_ThemNhanVien', 'NhanVienController@postThem')->name('NhanVien_XLThem');
+        //Form Thêm Giay
+        Route::get('/Giay_FormThem', 'GiayController@getThem')->name('Giay_Them');
+        Route::post('/Giay_ThemGiay', 'GiayController@postThem')->name('Giay_XLThem');
 
         // //From sua Nhan Vien
         // Route::get('/NhanVien_FormSua/{id}', 'NhanVienController@getSua')->name('NhanVien_Sua');
@@ -105,16 +110,16 @@ Route::group(['prefix' => 'admin'],function(){
     Route::group(['prefix' => 'NhaCungCap'],function(){
         // #Danh sach Nha cung cap
         Route::get('/NhaCungCap_DS','NhaCungCapController@getDanhSach')->name('NhaCungCap_DS');
-        // //Form Thêm NhanVien
-        // Route::get('/NhanVien_FormThem', 'NhanVienController@getThem')->name('NhanVien_Them');
-        // Route::post('/NhanVien_ThemNhanVien', 'NhanVienController@postThem')->name('NhanVien_XLThem');
+        //Form Thêm Nha cuNg cap
+        Route::get('/NhaCungCap_FormThem', 'NhaCungCapController@getThem')->name('NhaCungCap_Them');
+        Route::post('/NhaCungCap_ThemNhanVien', 'NhaCungCapController@postThem')->name('NhaCungCap_XLThem');
 
-        // //From sua Nhan Vien
-        // Route::get('/NhanVien_FormSua/{id}', 'NhanVienController@getSua')->name('NhanVien_Sua');
-        // Route::post('/NhanVien_SuaNhanVien/{id}', 'NhanVienController@postSua')->name('NhanVien_XLSua');
+        //From sua Nha Cung Cap
+        Route::get('/NhaCungCap_FormSua/{id}', 'NhaCungCapController@getSua')->name('NhaCungCap_Sua');
+        Route::post('/NhaCungCap_SuaNhaCungCap/{id}', 'NhaCungCapController@postSua')->name('NhaCungCap_XLSua');
 
-        // //xoa Nhan Vien
-        // Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
+        //xoa Nha Cung Cap
+        Route::get('/NhaCungCap_Xoa/{id}', 'NhaCungCapController@getXoa')->name('NhaCungCap_Xoa');
     });
 
 

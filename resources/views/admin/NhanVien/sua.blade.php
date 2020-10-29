@@ -36,7 +36,22 @@
                     </div>
                   {{--username --}}
 
-                  {{-- password--}}
+                  {{-- hoten--}}
+                
+                <div class="form-group " >
+                  <label for="firstname" class="control-label col-lg-3"> Họ tên</label>
+                  <div class="col-lg-6">
+                      <input class=" form-control"  value="{{$NhanVien->nv_hoten}}" name="nv_hoten" type="text" id="nv_hoten">
+
+                    @if($errors->has('nv_hoten'))
+                    <div style="color:red">{{ $errors->first('nv_hoten')}}</div>
+                    @endif
+                  </div>
+                </div>
+
+              {{--hoten--}}
+
+                  <!-- {{-- password--}}
                     <div class="form-group " >
                       <label for="firstname" class="control-label col-lg-3">Mật khẩu</label>
                       <div class="col-lg-6">
@@ -61,7 +76,7 @@
                       </div>
                       {{-- Xác nhận mật khẩu --}}
 
-
+ -->
 
 
                   {{-- Giới Tính --}}
@@ -86,6 +101,19 @@
                       </div>
                     </div>
                   {{-- Giới Tính --}}
+
+                  {{-- Ngay sinh --}}
+                    <div class="form-group " >
+                      <label for="firstname" class="control-label col-lg-3">Ngày sinh</label>
+                      <div class="col-lg-6">
+                      <input class=" form-control" id="nv_ngaysinh" value="{{$NhanVien->nv_ngaysinh}}" name="nv_ngaysinh" type="date">
+                          @if($errors->has('nv_ngaysinh'))
+                          <div style="color:red">{{ $errors->first('nv_ngaysinh')}}</div>
+                          @endif
+                        </div>
+                    </div>
+
+                  {{-- Ngay sinh --}}
 
                 
 

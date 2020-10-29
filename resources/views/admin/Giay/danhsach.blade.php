@@ -68,7 +68,6 @@
           <tr>
             <th data-breakpoints="xs">STT</th>
             <th>Loại mã</th>
-            <th>Khuyến mãi mã</th>
             <th>Nhà cung cấp mã</th>
             <th>Tên giày</th>
             <th>Giá</th>
@@ -83,7 +82,6 @@
                 <tr data-expanded="true">
                     <td>{{$key + 1}}</td>
                     <td>{{$giay->LoaiGiay->loai_ten}}</td>
-                    <td>{{$giay->km_id}}</td>
                     <td>{{$giay->Nhacungcap->ncc_ten}}</td>
                     <td>{{$giay->giay_ten}}</td>
                     <td>{{$giay->giay_gia}}</td>

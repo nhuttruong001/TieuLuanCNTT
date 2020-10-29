@@ -13,6 +13,11 @@ use Redirect;
 
 class NhanVienController extends Controller
 {
+    function __construct(){
+        $NhanVien = NhanVien::all();
+        $nv_id = "";
+        view()->share('nv_id',$nv_id);
+	}
     public function getDanhSach(){
         $NhanVien = NhanVien::where('nv_trangthai','=',1)->paginate(10);
         return view('admin.NhanVien.danhsach')->with('NhanVien',$NhanVien);
@@ -64,9 +69,9 @@ class NhanVienController extends Controller
     }
 
     public function postSua(Request $request, $id){
-        $Nhanvien = Nhanvien::find($id);
+        $NhanVien = NhanVien::find($id);
         $NhanVien->nv_username = $request->nv_username;
-        $NhanVien->nv_password = bcrypt($request->nv_password);
+        // $NhanVien->nv_password = $request->nv_password;
         $NhanVien->nv_hoten = $request->nv_hoten;
         $NhanVien->nv_gioitinh = $request->nv_gioitinh;
         $NhanVien->nv_ngaysinh = $request->nv_ngaysinh;
@@ -74,6 +79,7 @@ class NhanVienController extends Controller
         $NhanVien->nv_sdt = $request->nv_sdt;
         $NhanVien->nv_trangthai = 1;
         $NhanVien->save();
+
         Session::flash('alert-2', 'Cập Nhật thành công!!!');
         return redirect()->route('NhanVien_DS');
 
@@ -87,7 +93,19 @@ class NhanVienController extends Controller
         return redirect()->route('NhanVien_DS');
     }
 
+    public function postTimkiem(Request $request){
+        $tukhoa = $request->tukhoa;
+        $nv_id = $request->nv_id;
+    
+        // nhập đầy đủ
+        if((!empty($tukhoa)) && (!empty($nv_id))){
+            $NhanVien = NhanVien::where([['nv_id','=',$nv_id],['nv_hoten','like',"%$tukhoa%"],['nv_trangthai',1],])->paginate(10);
+        }// nhập tên nhan vien
+        else {
+            $NhanVien = NhanVien::where([['nv_hoten','like',"%$tukhoa%"],['nv_trangthai',1],])->paginate(10);
+        }
+        return view('admin.NhanVien.danhsach')->with('NhanVien',$NhanVien)->with('nv_id',$nv_id)->with('tukhoa',$tukhoa);
+    
 
-
-
+}
 }

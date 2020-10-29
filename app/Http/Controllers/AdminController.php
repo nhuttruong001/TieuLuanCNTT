@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Admin;
 use Validator;
@@ -9,10 +9,20 @@ use Session;
 use DB;
 use Image;
 use Response;
-use Redirect;
+
+
+
+
 
 class AdminController extends Controller
 {
+    function __construct(){
+        $Admin = DB::table('Admin')->where('ad_trangthai',1)->get();
+        $tukhoa = "";
+        view()->share('Admin',$Admin);
+        view()->share('tukhoa',$tukhoa);
+    }
+
     public function getDanhSach(){
         $Admin = admin::where('ad_trangthai','=',1)->paginate(10);
         return view('admin.Admin.danhsach')->with('Admin',$Admin);
@@ -54,6 +64,17 @@ class AdminController extends Controller
         $Admin->save();
          Session::flash('alert-3', 'Xóa thành công!!!');
          return redirect()->route('Admin_DS');
+    }
+
+    public function postTimkiem(Request $request){
+        $tukhoa = $request->tukhoa;
+        $Admin = DB::table('Admin')
+        // ->leftjoin('Admin as Admintt','Admintt.ad_id','=','Admin.dv_tructhuoc_id')
+        ->select('Admin.*')
+        ->where('Admin.ad_username','like',"%$tukhoa%")
+        ->get();
+        //dd($DonVi);
+        return view('admin.Admin.danhsach')->with('Admin',$Admin)->with('tukhoa',$tukhoa);
     }
     
 }
