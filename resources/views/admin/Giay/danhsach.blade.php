@@ -49,7 +49,7 @@
         <form  id="content-form" class="form-inline" role="form" action="" method="get">
             {{ csrf_field() }}
             <button type="submit" class="btn btn-primary" title="Tìm" id="search"><i class=" glyphicon glyphicon-search" style="color: aliceblue"></i></button>
-                  <a href=""><button title="Thêm" type="button"  class="btn btn-primary"><i class="glyphicon glyphicon-plus" style="color: aliceblue"></i></button></a>
+                  <a href="{{route('Giay_Them')}}"><button title="Thêm" type="button"  class="btn btn-primary"><i class="glyphicon glyphicon-plus" style="color: aliceblue"></i></button></a>
         </form>
       </div>
     </div>

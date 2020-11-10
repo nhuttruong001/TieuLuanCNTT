@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',function() {
-    return('haha');
-});
+
+
+//trang chu
+Route::get('/home','IndexController@getIndex')->name('trangchu');
+
 
 
 Route::group(['prefix' => 'admin'],function(){

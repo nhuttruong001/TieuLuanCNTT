@@ -23,7 +23,7 @@ class CreateGiayTable extends Migration
             $table->String('giay_hinhanh');
             $table->text('giay_mota');
             $table->tinyInteger('giay_trangthai')->comment('1 la hien thi 0 la an thong tin');
-
+            $table->timestamps();
             
             $table->foreign('km_id')->references('km_id')->on('khuyenmai')->onDelete('CASCADE')->onUpdate('CASCADE');
             
