@@ -8,7 +8,7 @@ body{
 	color: #666;
 }
 #header{
-	background: #1778b8;		
+	background: #1cc3b2;		
 }
 #logo, #search, #cart{
 	height: 98px;
@@ -184,7 +184,7 @@ padding-left: 12px;
 	margin-top: 15px;
 }
 #footer-t{
-	background: #17a2b8;
+	background: #212529;
 	color: #fff;
 	padding: 15px 0 0 0;		
 }
@@ -195,7 +195,7 @@ padding-left: 12px;
 }
 
 #footer-b{
-	background: #FF6700;
+	background:#1cc3b2;
 	color: #fff;
 	font-size: 13px;
 	position: relative;

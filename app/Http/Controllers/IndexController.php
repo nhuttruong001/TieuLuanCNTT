@@ -74,4 +74,38 @@ class IndexController extends Controller
             
         return view('frontend.index')->with('giay1',$giay1);
     }
+
+    public function getCart(){
+        return view('frontend.cart');
+    }
+
+    public function getDetails(){
+        return view('frontend.details');
+    }
+
+    public function getSearch(){
+        return view('frontend.search');
+    }
+
+    public function getCategory(){
+        return view('frontend.category');
+    }
+
+    public function getComplete(){
+        return view('frontend.complete');
+    }
+
+    public function getEmail(){
+        return view('frontend.email');
+    }
+
+    public function getSignup(){
+        return view('frontend.signup');
+    }
+
+    public function getLogin(){
+        return view('frontend.login');
+    }
+
+
 }

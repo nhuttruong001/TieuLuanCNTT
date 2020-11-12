@@ -22,6 +22,38 @@ Route::get('/', function () {
 //trang chu
 Route::get('/home','IndexController@getIndex')->name('trangchu');
 
+//cart
+
+Route::get('/cart','IndexController@getCart')->name('cart');
+
+//details
+
+Route::get('/details','IndexController@getDetails')->name('details');
+
+//search
+
+Route::get('/search','IndexController@getSearch')->name('search');
+
+//category
+
+Route::get('/category','IndexController@getCategory')->name('category');
+
+//complete
+
+Route::get('/complete','IndexController@getComplete')->name('complete');
+
+//email
+
+Route::get('/email','IndexController@getEmail')->name('email');
+
+//singup
+
+Route::get('/signup','IndexController@getSignup')->name('signup');
+
+//login
+
+Route::get('/login','IndexController@getLogin')->name('login');
+
 
 
 Route::group(['prefix' => 'admin'],function(){
@@ -77,18 +109,18 @@ Route::group(['prefix' => 'admin'],function(){
     });
 
     Route::group(['prefix' => 'Giay'],function(){
-        // #Danh sach Nha cung cap
+        // #Danh sach giay
         Route::get('/Giay_DS','GiayController@getDanhSach')->name('Giay_DS');
         //Form Thêm Giay
         Route::get('/Giay_FormThem', 'GiayController@getThem')->name('Giay_Them');
         Route::post('/Giay_ThemGiay', 'GiayController@postThem')->name('Giay_XLThem');
 
-        // //From sua Nhan Vien
-        // Route::get('/NhanVien_FormSua/{id}', 'NhanVienController@getSua')->name('NhanVien_Sua');
-        // Route::post('/NhanVien_SuaNhanVien/{id}', 'NhanVienController@postSua')->name('NhanVien_XLSua');
+        // //From sua giay
+        Route::get('/Giay_FormSua/{id}', 'GiayController@getSua')->name('Giay_Sua');
+        Route::post('/Giay_SuaGiay/{id}', 'GiayController@postSua')->name('Giay_XLSua');
 
-        // //xoa Nhan Vien
-        // Route::get('/NhanVien_Xoa/{id}', 'NhanVienController@getXoa')->name('NhanVien_Xoa');
+        //xoa Nhan Vien
+        Route::get('/Giay_Xoa/{id}', 'GiayController@getXoa')->name('Giay_Xoa');
     });
 
 

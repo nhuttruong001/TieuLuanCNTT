@@ -8,12 +8,19 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
     <!-- Title -->
     <title>Quản Lý Bán Giày</title>
     <base href="{{asset('')}}">
-    <!-- Favicon -->
-     <!-- <link rel="icon" href="frontend/img/core-img/favicon.png">  -->
-  
+
+ 
+
+    <link rel="stylesheet" href="frontend/css/email.css">
+    <link rel="stylesheet" href="frontend/css/complete.css">
+    <link rel="stylesheet" href="frontend/css/details.css">
+    <link rel="stylesheet" href="frontend/css/category.css">
+    <link rel="stylesheet" href="frontend/css/search.css">
+
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="frontend/style.css">
@@ -21,9 +28,9 @@
 	<link rel="stylesheet" href="frontend/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="frontend/js/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="frontend/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
 		$(function() {
