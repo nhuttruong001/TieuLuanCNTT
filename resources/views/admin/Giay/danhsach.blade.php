@@ -78,7 +78,7 @@
         
         <tbody>
             @foreach ($Giay as $key => $giay)
-            @if ($giay->giay_trangthai == 1)
+            @if (($giay->giay_trangthai == 1) && ($giay->loaigiay->loai_trangthai == 1))
                 <tr data-expanded="true">
                     <td>{{$key + 1}}</td>
                     <td>{{$giay->LoaiGiay->loai_ten}}</td>

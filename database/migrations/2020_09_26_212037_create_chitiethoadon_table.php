@@ -14,6 +14,7 @@ class CreateChitiethoadonTable extends Migration
     public function up()
     {
         Schema::create('chitiethoadon', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->unsignedInteger('giay_id');
             $table->unsignedInteger('hd_id');
             $table->unsignedInteger('soluong');
@@ -21,6 +22,9 @@ class CreateChitiethoadonTable extends Migration
 
             $table->foreign('giay_id')->references('giay_id')->on('giay')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('hd_id')->references('hd_id')->on('hoadon')->onDelete('CASCADE')->onUpdate('CASCADE');
+
+            // $table->foreignId('giay_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('hd_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -14,6 +14,7 @@ class CreateHoadonTable extends Migration
     public function up()
     {
         Schema::create('hoadon', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('hd_id');
             $table->unsignedInteger('kh_id');
             $table->unsignedInteger('nv_id');
@@ -23,6 +24,9 @@ class CreateHoadonTable extends Migration
 
             $table->foreign('nv_id')->references('nv_id')->on('nhanvien')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('kh_id')->references('kh_id')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
+
+            // $table->foreignId('nv_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('kh_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

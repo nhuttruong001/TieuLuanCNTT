@@ -14,6 +14,7 @@ class CreateCatrucTable extends Migration
     public function up()
     {
         Schema::create('catruc', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('ca_id');
             $table->unsignedInteger('ad_id');
             $table->string('ca_ten');
@@ -21,6 +22,8 @@ class CreateCatrucTable extends Migration
             $table->timestamps();
 
             $table->foreign('ad_id')->references('ad_id')->on('admin')->onDelete('CASCADE')->onUpdate('CASCADE'); 
+
+            // $table->foreignId('ad_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

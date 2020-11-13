@@ -14,6 +14,7 @@ class CreateNhanvienTable extends Migration
     public function up()
     {
         Schema::create('nhanvien', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('nv_id');
             $table->string('nv_username');
             $table->string('nv_password');

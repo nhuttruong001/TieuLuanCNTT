@@ -14,6 +14,7 @@ class CreateBinhluanTable extends Migration
     public function up()
     {
         Schema::create('binhluan', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('bl_id');
             $table->unsignedInteger('giay_id');
             $table->unsignedInteger('kh_id');
@@ -23,6 +24,10 @@ class CreateBinhluanTable extends Migration
 
             $table->foreign('giay_id')->references('giay_id')->on('giay')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('kh_id')->references('kh_id')->on('khachhang')->onDelete('CASCADE')->onUpdate('CASCADE');
+
+
+            // $table->foreignId('giay_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('kh_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
         
     }

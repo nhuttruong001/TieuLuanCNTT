@@ -12,10 +12,10 @@
 							<li class="menu-item">danh mục sản phẩm</li>
 							<li class="menu-item"><a href="#" title="">Giày nam</a></li>
 							<li class="menu-item"><a href="#" title="">Giày nữ</a></li>
-							<li class="menu-item"><a href="#" title="">Sneaker</a></li>	
+							<li class="menu-item"><a href="#" title="">Nike</a></li>	
+							<li class="menu-item"><a href="#" title="">Adidas</a></li>
 							<li class="menu-item"><a href="#" title="">Sandal</a></li>
-							<li class="menu-item"><a href="#" title="">Giầy tây</a></li>
-							<li class="menu-item"><a href="#" title="">Giày mọi</a></li>
+							<li class="menu-item"><a href="#" title="">Giày Tây</a></li>
 							<li class="menu-item"><a href="#" title="">Bóng đá</a></li>
 											
 						</ul>
@@ -98,75 +98,110 @@
 						<div class="products">
 							<h3>sản phẩm nổi bật</h3>
 							<div class="product-list row">
+							@foreach ($giay1 as $g)
+								@if($g->giay_trangthai == 1)
 								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-1.png')}}" class="img-thumbnail"></a>
+									<a href="#"><img src="upload/giay/{{$g->giay_hinhanh}}" class="img-thumbnail"></a>
+									<p><a href="#">{{$g->giay_ten}}</a></p>
+									<p class="price">{{$g->giay_gia}}</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                                    
+								</div>
+								@endif
+								@endforeach
+							</div>                	                	
+						</div>
+
+						<!-- <div id="wrap-inner">
+						<div class="products">
+							<h3>sản phẩm nổi bật</h3>
+							<div class="product-list row">
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-1.png" class="img-thumbnail"></a>
 									<p><a href="#">iPhone 6S Plus 64G</a></p>
 									<p class="price">10.000.000</p>	  
 									<div class="marsk">
 										<a href="#">Xem chi tiết</a>
 									</div>                                    
 								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-2.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-3.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-4.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-1.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-4.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-3.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-2.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div> 
 							</div>                	                	
-						</div>
+						</div> -->
 
 						<div class="products">
 							<h3>sản phẩm mới</h3>
+							<div class="product-list row">
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-1.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-2.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-3.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-4.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-1.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-2.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-3.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                        
+								</div>
+								<div class="product-item col-md-3 col-sm-6 col-xs-12">
+									<a href="#"><img src="img/home/product-4.png" class="img-thumbnail"></a>
+									<p><a href="#">iPhone 6S Plus 64G</a></p>
+									<p class="price">10.000.000</p>	  
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>                      	                      
+								</div> 
+							</div>    
+						</div>
+					</div>
+
+						<!-- <div class="products">
+							<h3>sản phẩm mới</h3>
+
 							<div class="product-list row">
 								<div class="product-item col-md-3 col-sm-6 col-xs-12">
 									<a href="#"><img src="{{asset('frontend/img/home/product-1.png')}}" class="img-thumbnail"></a>
@@ -175,64 +210,8 @@
 									<div class="marsk">
 										<a href="#">Xem chi tiết</a>
 									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-2.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-3.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-4.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-1.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-2.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-3.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                        
-								</div>
-								<div class="product-item col-md-3 col-sm-6 col-xs-12">
-									<a href="#"><img src="{{asset('frontend/img/home/product-4.png')}}" class="img-thumbnail"></a>
-									<p><a href="#">iPhone 6S Plus 64G</a></p>
-									<p class="price">10.000.000</p>	  
-									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
-									</div>                      	                      
-								</div> 
-							</div>    
+								</div> -->
+								
 						</div>
 					</div>
 					

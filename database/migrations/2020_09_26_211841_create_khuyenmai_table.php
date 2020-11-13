@@ -14,6 +14,7 @@ class CreateKhuyenmaiTable extends Migration
     public function up()
     {
         Schema::create('khuyenmai', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('km_id');
             $table->date('km_ngaybd');
             $table->date('km_ngaykt');

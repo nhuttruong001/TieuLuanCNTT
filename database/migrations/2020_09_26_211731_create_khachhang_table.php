@@ -14,6 +14,7 @@ class CreateKhachhangTable extends Migration
     public function up()
     {
         Schema::create('khachhang', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('kh_id');
             $table->string('kh_username');
             $table->string('kh_password');

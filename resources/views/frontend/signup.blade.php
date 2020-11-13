@@ -30,7 +30,7 @@
                 <input type="text" name="kh_diachi"> 
                 <label >Số điện thoại</label>
                 <input type="number" name="kh_sdt"> 
-                <input id="submit" type="submit" name="submit" value="Gửi">
+                <input id="submit" type="submit" name="submit" value="Đăng ký">
             </div>                
         </div>
     </body>

@@ -14,6 +14,7 @@ class CreateLoaigiayTable extends Migration
     public function up()
     {
         Schema::create('loaigiay', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('loai_id');
             $table->string('loai_ten');
             $table->tinyInteger('loai_trangthai')->comment('1 la hien thi 0 la an thong tin');

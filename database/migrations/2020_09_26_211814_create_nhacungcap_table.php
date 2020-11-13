@@ -14,6 +14,7 @@ class CreateNhacungcapTable extends Migration
     public function up()
     {
         Schema::create('nhacungcap', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('ncc_id');
             $table->string('ncc_ten');
             $table->tinyInteger('ncc_trangthai')->comment('1 la hien thi 0 la an thong tin');
