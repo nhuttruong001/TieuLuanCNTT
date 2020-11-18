@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class nhacungcap extends Model
 {
-    protected $table = "nhacungcap";
+    protected $table = "NhaCungCap";
     protected $primaryKey = 'ncc_id';
     protected $guarded      = ['ncc_id'];
     protected $fillable = [
@@ -14,7 +14,7 @@ class nhacungcap extends Model
         'ncc_trangthai'
     ];
 
-    public function giay(){
-        $this->hasMany('App\giay','giay_id','giay_id');
+    public function Giay(){
+        $this->hasMany('App\Giay','giay_id','giay_id');
     }
 }

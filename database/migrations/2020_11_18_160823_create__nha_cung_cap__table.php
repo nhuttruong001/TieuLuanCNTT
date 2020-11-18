@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdminTable extends Migration
+class CreateNhacungcapTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateAdminTable extends Migration
      */
     public function up()
     {
-        Schema::create('admin', function (Blueprint $table) {
+        Schema::create('NhaCungCap', function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->increments('ad_id');
-            $table->string('ad_username');
-            $table->string('ad_password');
-            $table->tinyInteger('ad_trangthai')->comment('1 la hien thi 0 la an thong tin');
+            $table->increments('ncc_id');
+            $table->string('ncc_ten');
+            $table->tinyInteger('ncc_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateAdminTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('NhaCungCap');
     }
 }

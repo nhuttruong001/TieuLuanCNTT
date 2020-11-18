@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class khuyenmai extends Model
 {
-    protected $table = "khuyenmai";
+    protected $table = "KhuyenMai";
     protected $primaryKey = 'km_id';
     protected $guarded      = ['km_id'];
     protected $fillable = [
@@ -16,7 +16,7 @@ class khuyenmai extends Model
         'km_trangthai'
     ];
 
-    public function giay(){
-        $this->belongsto('App\giay','giay_id','giay_id');
+    public function KhuyenMai(){
+        $this->belongsto('App\KhuyenMai','giay_id','giay_id');
     }
 }

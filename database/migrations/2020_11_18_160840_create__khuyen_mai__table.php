@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNhacungcapTable extends Migration
+
+class CreateKhuyenmaiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,13 @@ class CreateNhacungcapTable extends Migration
      */
     public function up()
     {
-        Schema::create('nhacungcap', function (Blueprint $table) {
+        Schema::create('KhuyenMai', function (Blueprint $table) {
             $table->engine = "InnoDB";
-            $table->increments('ncc_id');
-            $table->string('ncc_ten');
-            $table->tinyInteger('ncc_trangthai')->comment('1 la hien thi 0 la an thong tin');
+            $table->increments('km_id');
+            $table->date('km_ngaybd');
+            $table->date('km_ngaykt');
+            $table->double('km_phantram');
+            $table->tinyInteger('km_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateNhacungcapTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhacungcap');
+        Schema::dropIfExists('KhuyenMai');
     }
 }

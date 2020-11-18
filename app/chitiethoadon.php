@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class chitiethoadon extends Model
 {
-    protected $table = "chitiethoadon";
+    protected $table = "ChiTietHoaDon";
  
     protected $fillable = [
         'giay_id',
@@ -14,10 +14,10 @@ class chitiethoadon extends Model
         'soluong'
     ];
 
-    public function giay(){
-        $this->belongsto('App\giay');
+    public function Giay(){
+        $this->belongsto('App\Giay');
     }
-    public function hoadon(){
-        $this->belongsto('App\hoadon');
+    public function HoaDon(){
+        $this->belongsto('App\HoaDon');
     }
 }

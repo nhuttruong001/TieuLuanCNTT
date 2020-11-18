@@ -4,22 +4,13 @@
                 <li class="sub-menu">
                     <a class="" href="index.html">
                         <i class="icon-sitemap"></i>
-                        <span >Admin</span>
+                        <span >User</span>
                     </a>
                         <ul class="sub">
-                            <li><a href="{{route('Admin_DS')}}">Danh Sách Admin</a></li>
+                            <li><a href="{{route('User_DS')}}">Danh Sách User</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="icon-user"></i>
-                        <span>Nhân Viên</span>
-                    </a>
-                    <ul class="sub">
-						<li><a href="{{route('NhanVien_DS')}}">Danh Sách Nhân Viên</a></li>
-                       
-                    </ul>
-                </li>
+               
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="icon-user"></i>

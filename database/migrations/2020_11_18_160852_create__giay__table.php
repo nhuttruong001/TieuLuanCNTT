@@ -13,7 +13,7 @@ class CreateGiayTable extends Migration
      */
     public function up()
     {
-        Schema::create('giay', function (Blueprint $table) {
+        Schema::create('Giay', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('giay_id');
             $table->unsignedInteger('loai_id');
@@ -26,11 +26,11 @@ class CreateGiayTable extends Migration
             $table->tinyInteger('giay_trangthai')->comment('1 la hien thi 0 la an thong tin');
             $table->timestamps();
             
-            $table->foreign('km_id')->references('km_id')->on('khuyenmai')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('km_id')->references('km_id')->on('KhuyenMai')->onDelete('CASCADE')->onUpdate('CASCADE');
             
-            $table->foreign('loai_id')->references('loai_id')->on('loaigiay')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('loai_id')->references('loai_id')->on('LoaiGiay')->onDelete('CASCADE')->onUpdate('CASCADE');
             
-            $table->foreign('ncc_id')->references('ncc_id')->on('nhacungcap')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('ncc_id')->references('ncc_id')->on('NhaCungCap')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 
             // $table->foreignId('km_id')->constrained()->on('khuyenmai')->onDelete('cascade')->onUpdate('cascade');
@@ -46,6 +46,6 @@ class CreateGiayTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('giay');
+        Schema::dropIfExists('Giay');
     }
 }

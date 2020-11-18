@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class khuyenmaiSeeder extends Seeder
+class KhuyenMaiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -42,6 +42,6 @@ class khuyenmaiSeeder extends Seeder
             ]
 
             ];
-            DB::table('khuyenmai')->insert($arr);
+            DB::table('KhuyenMai')->insert($arr);
     }
 }

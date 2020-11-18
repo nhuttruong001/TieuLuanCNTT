@@ -13,18 +13,16 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UserSeeder::class);
 
-        $this->call(adminSeeder::class);
-        $this->call(khachhangSeeder::class);
-        $this->call(loaigiaySeeder::class);
-        $this->call(nhacungcapSeeder::class);
-        $this->call(khuyenmaiSeeder::class);
-        $this->call(giaySeeder::class);
-        $this->call(binhluanSeeder::class);
-        $this->call(catrucSeeder::class);
-        $this->call(nhanvienSeeder::class);
-        $this->call(hoadonSeeder::class);
-        $this->call(chitiethoadonSeeder::class);
-        $this->call(nhanvien_catrucSeeder::class);
+
+        $this->call(UserSeeder::class);
+       $this->call(LoaiGiaySeeder::class);
+        $this->call(NhaCungCapSeeder::class);
+        $this->call(KhuyenMaiSeeder::class);
+        $this->call(GiaySeeder::class);
+        $this->call(BinhLuanSeeder::class);
+        $this->call(HoaDonSeeder::class);
+        $this->call(ChiTietHoaDonSeeder::class);
+   
         
     }
 }

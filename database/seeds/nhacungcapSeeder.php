@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class nhacungcapSeeder extends Seeder
+class NhaCungCapSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -29,6 +29,6 @@ class nhacungcapSeeder extends Seeder
             ]
 
             ];
-            DB::table('nhacungcap')->insert($arr);
+            DB::table('NhaCungCap')->insert($arr);
     }
 }

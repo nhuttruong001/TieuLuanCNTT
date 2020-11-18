@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class loaigiay extends Model
 {
-    protected $table = "loaigiay";
+    protected $table = "LoaiGiay";
     protected $primaryKey = 'loai_id';
     protected $guarded      = ['loai_id'];
     protected $fillable = [
@@ -14,7 +14,7 @@ class loaigiay extends Model
         'loai_trangthai'
     ];
 
-    public function giay(){
-        $this->hasMany('App\giay','giay_id','giay_id');
+    public function Giay(){
+        $this->hasMany('App\Giay','giay_id','giay_id');
     }
 }

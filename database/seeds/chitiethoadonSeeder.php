@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class chitiethoadonSeeder extends Seeder
+class ChiTietHoaDonSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,6 +24,6 @@ class chitiethoadonSeeder extends Seeder
             ]
 
             ];
-            DB::table('chitiethoadon')->insert($arr);
+            DB::table('ChiTietHoaDon')->insert($arr);
     }
 }

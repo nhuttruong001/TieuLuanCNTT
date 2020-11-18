@@ -13,7 +13,7 @@ class CreateLoaigiayTable extends Migration
      */
     public function up()
     {
-        Schema::create('loaigiay', function (Blueprint $table) {
+        Schema::create('LoaiGiay', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('loai_id');
             $table->string('loai_ten');
@@ -29,6 +29,6 @@ class CreateLoaigiayTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loaigiay');
+        Schema::dropIfExists('LoaiGiay');
     }
 }
