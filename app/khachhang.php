@@ -23,4 +23,10 @@ class khachhang extends Model
     public function hoadon(){
         $this->hasMany('App\hoadon','hd_id','hd_id');
     }
+
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+    
 }

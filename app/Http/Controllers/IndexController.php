@@ -76,11 +76,13 @@ class IndexController extends Controller
     }
 
     public function getCart(){
+        $details =Giay::find($id);
         return view('frontend.cart');
     }
 
-    public function getDetails(){
-        return view('frontend.details');
+    public function getDetails($id){
+        $details =Giay::find($id);
+        return view('frontend.details')->with('details',$details);
     }
 
     public function getSearch(){

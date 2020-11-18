@@ -105,7 +105,7 @@
 									<p><a href="#">{{$g->giay_ten}}</a></p>
 									<p class="price">{{$g->giay_gia}}</p>	  
 									<div class="marsk">
-										<a href="#">Xem chi tiết</a>
+										<a href="{{route('details',['id'=>$g->giay_id])}}">Xem chi tiết</a>
 									</div>                                    
 								</div>
 								@endif

@@ -98,35 +98,25 @@
 					<div id="wrap-inner">
 						<div id="product-info">
 							<div class="clearfix"></div>
-							<h3>Điện thoại Apple iPhone 7 Plus - 32GB</h3>
+							<h3>{{$details->giay_ten}}</h3>
 							<div class="row">
 								<div id="product-img" class="col-xs-12 col-sm-12 col-md-3 text-center">
-									<img src="img/details/product.jpg">
+									<img src="upload/giay/{{$details->giay_hinhanh}}">
 								</div>
 								<div id="product-details" class="col-xs-12 col-sm-12 col-md-9">
-									<p>Giá: <span class="price">10.000.000</span></p>
+									<p>Giá: <span class="price" >{{$details->giay_gia}} VND</span></p>
 									<p>Bảo hành: 1 đổi 1 trong 12 tháng</p> 
-									<p>Phụ kiện: Dây cáp sạc, tai nghe</p>
-									<p>Tình trạng: Máy mới 100%</p>
-									<p>Khuyến mại: Hỗ trợ trả góp 0% dành cho các chủ thẻ Ngân hàng Sacombank</p>
+									<p>Phụ kiện: Vớ,bộ vệ sinh giày</p>
+									<p>Tình trạng: mới 100%</p>
+									<p>Hỗ trợ thanh toán : Paypal,...</p>
 									<p>Còn hàng: Còn hàng</p>
-									<p class="add-cart text-center"><a href="#">Đặt hàng online</a></p>
+									<p class="add-cart text-center"><a href="{{route('cart')}}">Đặt hàng online</a></p>
 								</div>
 							</div>							
 						</div>
 						<div id="product-detail">
 							<h3>Chi tiết sản phẩm</h3>
-							<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p class="text-justify">{{$details->giay_mota}}</p>
 						</div>
 						<div id="comment">
 							<h3>Bình luận</h3>

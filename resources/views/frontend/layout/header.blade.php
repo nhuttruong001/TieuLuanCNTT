@@ -16,9 +16,28 @@
 				</div>
 				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
 					<a class="display" href="#">Giỏ hàng</a>
-					<a href="#">6</a>				    
+					<a href="#">6</a>
+
+			
+			
+								    
 				</div>
-			</div>			
+			</div>		
 		</div>
+	<a href="{{route('login')}}"><button class="button" style="position:absolute;top:28px;right:10px;">Đăng nhập</button><a/>
+<!-- 
+	<div class="dropdown" style="position:absolute;top:28px;right:10px;">
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+	<a href="{{route('login')}}" style="color:white">Đăng nhập</a>
+  </button> 
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Link 1</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</div> -->
+
+
+	
 	</header><!-- /header -->
 	<!-- endheader -->

@@ -22,13 +22,16 @@ Route::get('/', function () {
 //trang chu
 Route::get('/home','IndexController@getIndex')->name('trangchu');
 
+
+
 //cart
 
 Route::get('/cart','IndexController@getCart')->name('cart');
 
 //details
 
-Route::get('/details','IndexController@getDetails')->name('details');
+Route::get('/details/{id}','IndexController@getDetails')->name('details');
+
 
 //search
 
@@ -52,7 +55,16 @@ Route::get('/signup','IndexController@getSignup')->name('signup');
 
 //login
 
-Route::get('/login','IndexController@getLogin')->name('login');
+Route::get('/login','AuthController@getLogin')->name('formlogin');
+Route::post('/login-xl','AuthController@postLogin')->name('login');
+
+
+//login1
+Route::get('/login1','AuthController@getLogin')->name('formlogin1');
+Route::post('/login1-xl','AuthController@postLogin')->name('login1');
+
+
+
 
 
 
